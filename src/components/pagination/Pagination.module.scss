@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 5rem;
+}
+
+.link {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--disabled-color-02);
+
+  &.active {
+    font-weight: bold;
+    color: var(--main-color-02); /* text-blue-500 */
+  }
+    
+  &.disabled {
+    pointer-events: none;
+    color: var(--disabled-color-03); 
+  }
+}

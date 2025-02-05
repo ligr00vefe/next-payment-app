@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem; /* 4 x Tailwind 기본 spacing (4px) */
+
+  .icon {
+    color: #525252; /* Tailwind의 text-neutral-600 색상 */
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+  
+    .label {
+      font-size: 1.125rem; /* text-lg, 약 18px */
+      font-weight: 600; /* font-semibold */
+    }
+    
+    .description {
+      font-weight: 300; /* font-light */
+      color: #737373; /* Tailwind의 text-neutral-500 색상 */
+    }
+  }
+}
+
+
+

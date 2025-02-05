@@ -1,0 +1,73 @@
+.wrapper {
+    display: flex;    
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    overflow-x: auto;
+}
+
+.category-box {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    color: e5e7eb;
+    border-bottom: 2px solid;
+
+    &:hover {
+        border-color: black; 
+    }
+      
+    &.selected {
+        color: black;
+        border-color: black;
+    }
+      
+    &:not(.selected) {
+        color: #e5e7eb;
+        border-color: transparent; 
+    }
+
+    span {
+        font-size: 1.7rem;
+        font-weight: 500;
+    }
+}
+
+.category-input {        
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* 3 * 0.25rem */
+    border-radius: 0.75rem; /* xl */
+    border: 2px solid var(--disabled-color-03);
+    padding: 1rem; /* 4 * 0.25rem */
+    transition: all 0.2s ease; /* transition */
+    cursor: pointer;
+
+    &:hover {
+        border-color: var(--main-color-02); 
+    }
+      
+    &.selected {
+        border-color: var(--main-color-02); 
+    }
+      
+    &:not(.selected) {
+        border-color: var(--disabled-color-03);
+    }
+
+    span {
+        font-size: 1.7rem;
+        font-weight: 600;/* font-semibold */
+    }
+}
+
+// 반응형
+@media (min-width: 1024px) {
+    .wrapper {
+        grid-template-columns: repeat(2, minmax(0, 1fr));        
+      }
+}

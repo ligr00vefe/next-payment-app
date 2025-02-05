@@ -1,0 +1,24 @@
+.wrapper {
+  position: relative; /* relative */
+  cursor: pointer; /* cursor-pointer */
+  transition: opacity 0.2s; /* transition */
+
+  &:hover {
+    opacity: 0.8; /* hover:opacity-80 */
+  }  
+}
+
+.outline-heart {
+  position: absolute; /* absolute */
+  fill: white; /* fill-white */
+  top: -2px; /* -top-[2px] */
+  right: -2px; /* -right-[2px] */
+}
+
+.fill-heart {
+  fill: #f43f5e; /* fill-rose-500 */
+}
+
+.fill-heart-gray {
+  fill: rgba(107, 114, 128, 0.7); /* fill-neutral-500/70 */
+}
