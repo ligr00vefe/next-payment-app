@@ -7,6 +7,7 @@ export interface IProductsParams {
   category?: string;
   page?: number;
   skip?: number;
+  take?: number;
 }
 
 export default async function getProducts(

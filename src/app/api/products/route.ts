@@ -20,7 +20,7 @@ export async function POST(request: Request) {
         longitude,
         price,
     } = body;
-    console.log('body: ', body);
+    console.log('@@body: ', body);
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     Object.keys(body).forEach((value: any) => {

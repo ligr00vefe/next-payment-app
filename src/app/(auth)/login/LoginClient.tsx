@@ -7,7 +7,6 @@ import styles from './Auth.module.scss';
 import LogoPath from '@/assets/colorful.svg';
 import Loader from '@/components/loader/Loader';
 import Link from 'next/link';
-import { toast } from 'react-toastify';
 import { signIn } from 'next-auth/react';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 import Input from '@/components/input/Input';
@@ -31,9 +30,9 @@ const LoginClient = () => {
         
         try {
           const data = signIn('credentials', body);
-          // console.log('@data', data);
+          console.log('@data', data);
         } catch (error) {
-          // console.log('@error', error);
+          console.log('@error', error);
         } finally {
           setIsLoading(false);
     
@@ -44,12 +43,7 @@ const LoginClient = () => {
             router.push('/');
           }
         }
-      }
-
-    // login width google
-    const signInWithGoogle = () => {
-
-    };
+    }
 
     return (
         <>
@@ -100,8 +94,14 @@ const LoginClient = () => {
                                 <button>회원가입</button>
                             </Link>
 
-                            <button onClick={signInWithGoogle}>
+                            <button onClick={() => signIn('google')}>
                                 Google 계정으로 로그인
+                            </button>
+                            <button onClick={() => signIn('naver')}>
+                                Naver 계정으로 로그인
+                            </button>
+                            <button onClick={() => signIn('kakao')}>
+                                Kakao 계정으로 로그인
                             </button>
                         </div>
                     </form>

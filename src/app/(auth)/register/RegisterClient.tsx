@@ -84,7 +84,7 @@ const RegisterClient = () => {
                             <Input
                                 id="name"
                                 label="이름"
-                                type="name"
+                                type="text"
                                 placeholder="이름을 입력하세요."
                                 disabled={isLoading}
                                 register={register}
